@@ -19,6 +19,12 @@
     position: relative;
   }
 
+  .playPulse {
+    -webkit-animation: Pulse .5s ease;
+    -moz-animation: Pulse .5s ease;
+    animation: Pulse .5s ease;
+  }
+
   .representationGreen, .representationRed {
     position: absolute;
     top: 0;
@@ -34,9 +40,9 @@
     background: linear-gradient(270deg, #c5248d, #c52446);
     background-size: 300% 300%;
 
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
+    -webkit-animation: MoveBackground 30s ease infinite;
+    -moz-animation: MoveBackground 30s ease infinite;
+    animation: MoveBackground 30s ease infinite;
   }
 
   .representationGreen {
@@ -50,24 +56,76 @@
 
     transition: .5s ease;
 
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
+    -webkit-animation: MoveBackground 30s ease infinite;
+    -moz-animation: MoveBackground 30s ease infinite;
+    animation: MoveBackground 30s ease infinite;
   }
 
-  @-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  @-webkit-keyframes MoveBackground {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
   }
-  @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  @-moz-keyframes MoveBackground {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
   }
-  @keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  @keyframes MoveBackground {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+
+  @-webkit-keyframes Pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @-moz-keyframes Pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes Pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 }
