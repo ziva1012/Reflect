@@ -18,6 +18,8 @@ function createWindow() {
             nodeIntegration: true
         }
     });
+    
+    win.setMenu(null);
 
     if (IS_DEV) {
         win.loadURL(DEV_SERVER_URL);
