@@ -3,7 +3,7 @@ import { app, BrowserWindow } from "electron";
 declare const ENVIRONMENT: String;
 
 const IS_DEV = ENVIRONMENT == "development";
-const DEV_SERVER_URL = "http://localhost:9000";
+const DEV_SERVER_URL = "http://localhost:9001";
 const HTML_FILE_PATH = "index.html";
 
 
