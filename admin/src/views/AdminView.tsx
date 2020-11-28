@@ -24,28 +24,13 @@ export class AdminView extends React.Component<any, state> {
     }
 
     componentDidMount() {
-        this.setState({
-            users: [
-                {
-                    id: "1",
-                    isAutomatic: false
-                },
-                {
-                    id: "2",
-                    isAutomatic: false
-                },
-                {
-                    id: "3",
-                    isAutomatic: false
-                }
-            ]
-        })
+        this.setState({});
     }
 
     handleAddUserDisplay(isAutomatic: boolean) {
         let displays = this.state.users;
         displays.push({
-            id: (parseInt(displays[displays.length - 1].id) + 1) + "",
+            id: (parseInt((displays[displays.length - 1] ?? 0).id) + 1) + "",
             isAutomatic: isAutomatic
         });
         this.setState({users: displays});
