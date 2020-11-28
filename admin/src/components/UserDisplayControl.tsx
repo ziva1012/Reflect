@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {ControlSlider} from "./ControlSlider";
 import style from "./../styles/userDisplayControl.scss";
 import {Button} from "@material-ui/core";
+import firebase from "firebase";
 
 interface props {
     id: string;
@@ -13,12 +14,12 @@ export function UserDisplayControl (props: props) {
 
     const handleChange = (newValue: number) => {
         console.log(`ID: ${props.id} newValue: ${newValue}`);
-        // TODO: implement firebase
+        firebase.database().ref("users").child(props.id).update({value: newValue / 100}).catch(alert);
     }
 
     const handlePulse = () => {
         console.log("PULSE");
-        // TODO: implement firebase
+        firebase.database().ref("users").child(props.id).update({pulse: true}).catch(alert);
     }
 
     return (
